@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://www.attivio.com/configuration/features/jms" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/jms http://www.attivio.com/configuration/features/jmsFeatures.xsd">
+  <jms:masterSlaveBroker brokerMemoryBlockAllButInternalLimit="75" brokerMemoryCommitTriggerLimit="90" brokerStoreBlockAllButInternalLimit="90" enabled="true" failSendIfNoSpace="false" featureNameSource="masterNode,slaveNode" masterNode="jmsMaster" memory="512 mb" optimizeAcknowledge="true" optimizeAcknowledgeTimeout="500" persistent="false" prefetchSize="20" slaveNode="jmsSlave" storeSpace="10 gb" swapSpace="10 gb" useCompression="true"/>
+</ff:features>

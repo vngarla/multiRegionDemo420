@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<attivio xmlns="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd ">
+  <configuration projectName="multiRegionDemo">
+    <haft faultTolerant="false"/>
+    <message-queue size="3"/>
+    <default-performance maxIngestInstances="0" maxQueryInstances="0"/>
+    <security keyStoreFileName="attivio.ks" trustStoreFileName="attivio.ks" keyPassword="attivio" storePassword="attivio" trustPassword="attivio" useSSL="${security.useSSL}"/>
+    <modules>
+      <module name="core-app" active="true"/>
+      <module name="factbook" active="true"/>
+      <module name="jms" active="true"/>
+      <module name="adminui" active="true"/>
+      <module name="memory" active="true"/>
+      <module name="profiler" active="true"/>
+      <module name="scheduler" active="true"/>
+      <module name="advancedtextextraction" active="true"/>
+      <module name="autocomplete" active="true"/>
+      <module name="rest" active="true"/>
+      <module name="sail" active="true"/>
+      <module name="opensearch" active="true"/>
+      <module name="webservice" active="true"/>
+      <module name="principals" active="true"/>
+      <module name="apisecurity" active="true"/>
+      <module name="businesscenter" active="true"/>
+      <module name="workflowvisualizer" active="true"/>
+      <module name="clustering" active="true"/>
+      <module name="entityextraction" active="true"/>
+      <module name="languagemodel" active="true"/>
+      <module name="keyphrases" active="true"/>
+    </modules>
+  </configuration>
+</attivio>

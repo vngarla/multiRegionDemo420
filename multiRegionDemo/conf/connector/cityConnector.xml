@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connector xmlns="http://www.attivio.com/configuration/type/connectorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="cityConnector" xsi:schemaLocation="http://www.attivio.com/configuration/type/connectorType http://www.attivio.com/configuration/type/connectorType.xsd http://www.attivio.com/configuration/type/componentType http://www.attivio.com/configuration/type/componentType.xsd ">
+  <scanner class="com.attivio.connector.CsvScanner">
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="startDirectory" value="${factbook.content.dir}/cities.csv"/>
+      <property name="idFieldFormat" value="CITY-%s-%s"/>
+      <property name="firstRowAreFieldNames" value="true"/>
+      <list name="idFields">
+        <entry value="country"/>
+        <entry value="title"/>
+      </list>
+    </properties>
+  </scanner>
+  <feeder>
+    <properties xmlns="http://www.attivio.com/configuration/type/componentType">
+      <property name="ingestWorkflowName" value="ingest"/>
+      <map name="staticFields">
+        <property name="table" value="city"/>
+      </map>
+    </properties>
+  </feeder>
+</connector>

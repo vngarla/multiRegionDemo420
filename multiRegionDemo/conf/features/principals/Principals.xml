@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:prin="http://www.attivio.com/configuration/features/principals" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/principals http://www.attivio.com/configuration/features/principalsFeatures.xsd">
+  <prin:principals enabled="true" nodeset="indexers">
+    <prin:principal name="aieadmin" password="*{QeDBUhv9roY=}" principal="aieadmin" realm="aie" type="USER"/>
+  </prin:principals>
+</ff:features>

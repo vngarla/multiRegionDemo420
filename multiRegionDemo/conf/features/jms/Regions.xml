@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<ff:features xmlns:ff="http://www.attivio.com/configuration/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://www.attivio.com/configuration/features/jms" xsi:schemaLocation="http://www.attivio.com/configuration/config http://www.attivio.com/configuration/config.xsd http://www.attivio.com/configuration/features/jms http://www.attivio.com/configuration/features/jmsFeatures.xsd">  
+    <jms:regions broadcastListenerNodeset="local" enabled="true" receiverWaitForCompletionLoopTimeout="-1">  
+        <jms:region region="default" uri="tcp://localhost:17006">  
+            <jms:environments>default</jms:environments>  
+        </jms:region>  
+        <jms:region region="emea" uri="tcp://localhost:17006">  
+            <jms:environments>emea</jms:environments>  
+            <jms:environments>us</jms:environments>  
+        </jms:region>  
+        <jms:region region="us" uri="tcp://localhost:18006">  
+            <jms:environments>emea</jms:environments>  
+            <jms:environments>us</jms:environments>  
+        </jms:region>  
+    </jms:regions>  
+</ff:features>  

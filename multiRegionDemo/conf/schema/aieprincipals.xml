@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.attivio.com/configuration/type/schemaType" name="aieprincipals" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.attivio.com/configuration/type/schemaType http://www.attivio.com/configuration/type/schemaType.xsd">
+  <fields default-search-field="content">
+    <field name="table" displayName="Table" type="STRING" indexed="true" stored="true" facet="true" sort="false" tokenize="no">
+      <properties>
+        <property name="index.relevancy" value="false"/>
+      </properties>
+    </field>
+    <field name="security.realmid" displayName="SecurityRealmID" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no" lowercase="yes"/>
+    <field name="security.principalid" displayName="PrincipalID" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no" lowercase="yes"/>
+    <field name="security.recordsetid" displayName="RecordSetID" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no"/>
+    <field name="security.principaltype" displayName="PrincipalType" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no"/>
+    <field name="security.principalname" displayName="PrincipalName" type="STRING" indexed="true" stored="true" facet="false" sort="true" tokenize="yes">
+      <properties>
+        <property name="index.anchors" value="true"/>
+      </properties>
+    </field>
+    <field name="security.read" displayName="GrantReadAccess" type="STRING" multivalue="yes" indexed="true" stored="true" facet="false" sort="false" tokenize="no">
+      <properties>
+        <property name="join.cachePolicy" value="static"/>
+      </properties>
+    </field>
+    <field name="security.denyread" displayName="DenyReadAccess" type="STRING" multivalue="yes" indexed="true" stored="true" facet="false" sort="false" tokenize="no">
+      <properties>
+        <property name="join.cachePolicy" value="static"/>
+      </properties>
+    </field>
+    <field name="security.principal.subject.guid" displayName="PrincipalSubjectGUID" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no"/>
+    <field name="security.principal.assoc.predicate" displayName="PrincipalAssocPredicate" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no"/>
+    <field name="security.principal.object.guid" displayName="PrincipalObjectGUID" type="STRING" multivalue="yes" indexed="true" stored="true" facet="false" sort="false" tokenize="no">
+      <properties>
+        <property name="join.cachePolicy" value="static"/>
+      </properties>
+    </field>
+    <field name="security.principal.pseudo.group" displayName="PrincipalPseudoGroup" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no"/>
+    <field name="content" type="TEXT" indexed="true" stored="false" facet="false" sort="false">
+      <include-field name="security.realmid"/>
+      <include-field name="security.principalid"/>
+      <include-field name="security.principalname"/>
+    </field>
+    <field name="apisecurity.domaintype" displayName="ApiSecurityDomainType" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no" lowercase="yes"/>
+    <field name="apisecurity.domainid" displayName="ApiSecurityDomainId" type="STRING" indexed="true" stored="true" facet="false" sort="false" tokenize="no" lowercase="yes"/>
+    <field name="apisecurity.rolename" displayName="ApiSecurityRoleName" type="STRING" indexed="true" stored="true" facet="true" sort="false" tokenize="no" lowercase="no"/>
+  </fields>
+</schema>
